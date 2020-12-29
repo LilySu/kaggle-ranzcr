@@ -43,15 +43,14 @@ docker-compose up
 #### data_sample folder:
  - contains full .csv's from the Ranzcr CLiP competition
  - contains a small sampling of .jpg data in the train and test folders
- - does not include .tfrec tensorflow files due to github file size limit
+ - Includes one .tfrec tensorflow file in the test_tfrecords directory due to github file size limit
 
 
 ## Copy Your Kaggle Data from your Computer into the Docker Container
-##### Pre-step:
- - To first download the Kaggle Competition Full dataset form the CLI
- - 1 Kaggle.com > Account > Home > Create New API Token
- - 2 Save kaggle.json inside of a .kaggle directory in your home directory
- - 3 Run `kaggle competitions download -c ranzcr-clip-catheter-line-classification`
+##### Pre-step to first download the Kaggle Competition Full dataset form the CLI
+ - Step 1. Kaggle.com > Account > Home > Create New API Token
+ - Step 2. Save kaggle.json inside of a .kaggle directory in your home directory
+ - Step 3. Run `kaggle competitions download -c ranzcr-clip-catheter-line-classification`
 
 #### When you have the full Kaggle Dataset in a directory:
 ##### The example assumes the dataset is unzipped under a 'data' directory within the  project directory
@@ -83,17 +82,17 @@ docker ps -a
 ```
 
 ## Cleanup
-#### Stop One Container
+#### Stop One Docker Container
 ```
 docker stop <CONTAINER_ID>
 ```
 
-#### Remove All Containers
+#### Remove One Docker Container
 ```
 docker rm <CONTAINER_ID>
 ```
 
-#### Remove Docker Images
+#### Remove One Docker Image
 ```
 docker rmi <CONTAINER_ID>
 ```
