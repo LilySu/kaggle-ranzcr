@@ -1,6 +1,8 @@
 # kaggle-ranzcr
 
-#### Kaggle RANZCR CLiP - notebooks and dataset for collaboration.
+#### [Kaggle RANZCR CLiP](https://www.kaggle.com/c/ranzcr-clip-catheter-line-classification/overview) notebooks and sample dataset for collaborative purposes.
+#### [About the Dataset](https://www.kaggle.com/c/ranzcr-clip-catheter-line-classification/data)
+####  [How the Prediction is Evaluated](https://www.kaggle.com/c/ranzcr-clip-catheter-line-classification/overview/evaluation)
 
 ## Run Project
 ```
@@ -8,7 +10,10 @@ docker-compose up
 ```
 <img src="https://github.com/LilySu/kaggle-ranzcr/blob/master/images/setup/docker-compose_up.PNG?raw=true"> 
 
-#### After pasting in the last url ie. http://127.0.0.1:8888/?token=a189b4479bf20dc53581f588cc36f392c0f2a6870509890b into your browser.
+#### Paste in the last url ie. http://127.0.0.1:8888/?token=a189b4479bf20dc53581f588cc36f392c0f2a6870509890b into your browser to run the jupyter notebook instance.
+#### This is what the root directory of the jupyter notebook looks like.
+
+<img src="https://github.com/LilySu/kaggle-ranzcr/blob/master/images/setup/after_pasting_in_the_last_url_root_directory.PNG?raw=true"> 
 
 ### Size
 
@@ -17,6 +22,7 @@ docker-compose up
 #### Docker Image Size: 2.25 MB - amount of data (on disk) that is used for the writable layer of the container.
 
 #### Docker Virtual Repository Size: 6.93 GB - shows the combined size of the readonly layer (the image), and the writable layer of the container shared between containers.
+#### Virtual size is disk space that takes up space once - during the build of the container 
 
 #### [For more info on storage usage](https://stackoverflow.com/questions/37966973/what-is-the-difference-between-the-size-and-the-virtual-size-of-the-docker-image)
 
@@ -31,7 +37,6 @@ docker-compose up
 
 ### Inside the Jupyter Notebook:
 #### notebooks folder:
-#### After pasting in the last url ie. http://127.0.0.1:8888/?token=a189b4479bf20dc53581f588cc36f392c0f2a6870509890b this is what you get:
 
 <img src="https://github.com/LilySu/kaggle-ranzcr/blob/master/images/setup/after_pasting_in_the_last_url.PNG?raw=true">
 
@@ -42,7 +47,14 @@ docker-compose up
 
 
 ## Copy Your Kaggle Data from your Computer into the Docker Container
+##### Pre-step:
+ - To first download the Kaggle Competition Full dataset form the CLI
+ - 1 Kaggle.com > Account > Home > Create New API Token
+ - 2 Save kaggle.json inside of a .kaggle directory in your home directory
+ - 3 Run `kaggle competitions download -c ranzcr-clip-catheter-line-classification`
 
+#### When you have the full Kaggle Dataset in a directory:
+##### The example assumes the dataset is unzipped under a 'data' directory within the  project directory
 - Step 1. Look up IMAGE name or CONTAINER ID
 ```
 docker ps -a
