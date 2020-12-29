@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  kaggle-second:
+    build: .
+#      # if running terminal in jupyter notebook, sudo with user as root gives the capabilities to download other modules
+    environment:
+      - GRANT_SUDO=yes
+      - JUPYTER_ENABLE_LAB=yes
+    user: root
+#      # copies all files in the below directories to the associated directories in docker
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+      - ./data:/home/jovyan/data
+      - ./data_sample:/home/jovyan/data_sample
+      - ./dependencies:/home/jovyan/dependencies
+#      # assigns port from .env file
+    ports:
+      - 8888:8888
+#      # container identifier name for user running dockerfile
+#      container_name: second
+#  #    # installs libraries in requirements.txt
+#  #    command: pip install -r dependencies/requirements.txt
