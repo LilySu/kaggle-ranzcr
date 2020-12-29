@@ -1,6 +1,6 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
-ARG BASE_CONTAINER=jupyter/scipy-notebook
+ARG BASE_CONTAINER=jupyter/tensorflow-notebook
 FROM $BASE_CONTAINER
 
 LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
@@ -10,7 +10,6 @@ USER root
 
 # Install Tensorflow, Pytorch, Timm, Matplotlib-venn, Opencv
 RUN pip install --quiet --no-cache-dir \
-    'tensorflow==2.3.1' \
     'timm==0.3.2' \
     'efficientnet==1.1.1' \
     'kaggle==1.5.10' && \
