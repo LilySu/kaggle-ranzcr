@@ -29,13 +29,13 @@ docker-compose up
 #### - To install Pytorch, open a terminal inside the running Jupyter instance and run:
  ```conda install pytorch torchvision torchaudio cpuonly -c pytorch -y```
 
-#### Inside the Jupyter Notebook:
-##### notebooks folder
+### Inside the Jupyter Notebook:
+#### notebooks folder:
 #### After pasting in the last url ie. http://127.0.0.1:8888/?token=a189b4479bf20dc53581f588cc36f392c0f2a6870509890b this is what you get:
 
 <img src="https://github.com/LilySu/kaggle-ranzcr/blob/master/images/setup/after_pasting_in_the_last_url.PNG?raw=true">
 
-##### data_sample folder
+#### data_sample folder:
  - contains full .csv's from the Ranzcr CLiP competition
  - contains a small sampling of .jpg data in the train and test folders
  - does not include .tfrec tensorflow files due to github file size limit
