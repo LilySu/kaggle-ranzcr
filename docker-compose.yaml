@@ -20,5 +20,5 @@ services:
       - 8888:8888
     command:
         - check_kaggledotjson.sh
-#      command: "start-notebook.sh \
-#        --NotebookApp.password=${KAGGLE_API_KEY} \
+# TODO
+#  Find out how ${KAGGLE_API_KEY} can be referenced by the user once the container is running and notebooks are launched.
