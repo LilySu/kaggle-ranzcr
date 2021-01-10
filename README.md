@@ -19,10 +19,8 @@ docker-compose up
 
 <img src="https://github.com/LilySu/kaggle-ranzcr/blob/master/images/setup/docker_image_size_and_name.PNG?raw=true"> 
 
-#### Docker Image Size: 2.25 MB - amount of data (on disk) that is used for the writable layer of the container.
-
-#### Docker Virtual Repository Size: 6.93 GB - shows the combined size of the readonly layer (the image), and the writable layer of the container shared between containers.
-#### Virtual size is disk space that takes up space once - during the build of the container 
+#### This Docker Container Image Size: 2.25 MB - amount of data (on disk) that is used for the writable layer of the container.
+#### However, when you run the container, you will need at the very least 6.93 GB, due to the face that the base containers being referenced contains many data science libraries for Python, Julia and R. 
 
 #### [For more info on storage usage](https://stackoverflow.com/questions/37966973/what-is-the-difference-between-the-size-and-the-virtual-size-of-the-docker-image)
 
