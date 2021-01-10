@@ -85,6 +85,17 @@ docker ps -a
 docker stop <CONTAINER_ID>
 ```
 
+### Run a Bash Script to Get into the Container
+#### Please note nothing you download inside the container in this way will be saved
+```
+docker exec -it <IMAGE NAME (kaggle-ranzcr_notebooks_1)> /bin/bash
+```
+#### Check file size
+```
+ls -lh
+```
+<img src="https://github.com/LilySu/kaggle-ranzcr/blob/master/images/setup/bash_inside_your_container.PNG?raw=true">  
+
 #### Remove One Docker Container
 ```
 docker rm <CONTAINER_ID>

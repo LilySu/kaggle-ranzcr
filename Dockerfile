@@ -8,7 +8,7 @@ LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 # USER $NB_UID
 USER root
 
-# Install Tensorflow, Pytorch, Timm, Matplotlib-venn, Opencv
+# installs packages without using the cache to save space
 RUN pip install --quiet --no-cache-dir \
     'timm==0.3.2' \
     'efficientnet==1.1.1' \
